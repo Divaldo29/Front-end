@@ -1,0 +1,31 @@
+<button type="button" (click)="openModal()" class="float-right btn btn-dark mb-2">Nuevo</button>
+<div class="table-responsive">
+  <table class="table  table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Programas</th>
+        <th>Descripcion</th>
+
+        <th colspan="2" class="text-center">Opciones</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let programa of programas; index as i">
+      <td>{{programa.progId}}</td>
+      <td>{{programa.progNombre}}</td>
+      <td>{{programa.progDescripcion}}</td>
+      <td class="text-center">
+        <button type="button" class="btn btn-sm btn-warning" (click)="openModalEdit(programa)" >Editar</button>
+      </td>
+      <td class="text-center">
+      <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(programa)">Eliminar</button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
