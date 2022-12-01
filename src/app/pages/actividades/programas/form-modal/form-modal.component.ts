@@ -4,7 +4,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ProgramaService} from "../../../../providers/services/programa.service";
 
 @Component({
-  selector: 'app-form-modal',
+  selector: 'app-form-modal-taller',
   templateUrl: './form-modal.component.html',
   styleUrls: ['./form-modal.component.css']
 })

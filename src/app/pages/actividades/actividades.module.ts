@@ -9,6 +9,8 @@ import {ActividadesRoutingModule} from "./actividades-routing.module";
 import {ProgramaService} from "../../providers/services/programa.service";
 import { FormModalComponent } from './programas/form-modal/form-modal.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { FormModalTallerComponent } from './talleres/form-modal-taller/form-modal-taller.component';
+import {TallerService} from "../../providers/services/taller.service";
 
 
 
@@ -18,7 +20,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     ProgramasComponent,
     MaterialesComponent,
     ActividadesComponent,
-    FormModalComponent
+    FormModalComponent,
+    FormModalTallerComponent,
   ],
     imports: [
         CommonModule,
@@ -26,7 +29,8 @@ import {ReactiveFormsModule} from "@angular/forms";
         ReactiveFormsModule
     ],
   providers: [
-    ProgramaService
+    ProgramaService,
+    TallerService,
   ]
 })
 export class ActividadesModule { }
