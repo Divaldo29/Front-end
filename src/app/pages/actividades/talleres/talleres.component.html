@@ -16,15 +16,15 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let taller of talleres;" >
-        <td>{{taller.tallId}}</td>
-        <td>{{taller.programa}}</td>
+      <tr *ngFor="let taller of talleres; index as i" >
+        <td>{{i+1}}</td>
+        <td>{{taller.programa.progNombre}}</td>
         <td>{{taller.tallTema}}</td>
         <td>{{taller.tallDesc}}</td>
         <td>{{taller.tallHoraAcademicas}}</td>
-        <td>{{taller.tallFecha }}</td>
+        <td>{{taller.tallFecha}}></td>
         <td>{{taller.tallHora}}</td>
-        <td>{{taller.talllugar}}</td>
+        <td>{{taller.tallLugar}}</td>
         <td>
           <button type="button" class="btn btn-sm btn-warning" (click)="openModalEdit(taller)">Editar
           </button>

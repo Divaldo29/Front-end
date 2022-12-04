@@ -3,6 +3,7 @@ import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {TallerService} from "../../../providers/services/taller.service";
 import Swal from "sweetalert2";
 import {FormModalTallerComponent} from "./form-modal-taller/form-modal-taller.component";
+import { ProgramaService } from 'src/app/providers/services/programa.service';
 
 @Component({
   selector: 'app-talleres',
@@ -13,7 +14,9 @@ export class TalleresComponent implements OnInit {
 
   talleres: any = [];
   constructor(private tallerService: TallerService,
-              private modalService: NgbModal) { }
+              private modalService: NgbModal,
+
+              ) { }
 
   ngOnInit(): void {
     this.getTalleres();
@@ -25,6 +28,7 @@ export class TalleresComponent implements OnInit {
     });
   }
 
+  
   openModal(): void {
     const modal = this.modalService.open(FormModalTallerComponent, {
       size: 'lg',
