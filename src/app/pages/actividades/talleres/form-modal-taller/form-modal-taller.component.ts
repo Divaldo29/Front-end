@@ -51,7 +51,6 @@ export class FormModalTallerComponent implements OnInit {
       tallHoraAcademicas: ['', [Validators.required]],
       tallLugar: ['', [Validators.required]],
       progId: ['', [Validators.required]],
-      programa: ['', [Validators.required]],
     };
     this.frmTaller= this.formBuilder.group(controls);// construir formulario
   }
@@ -65,8 +64,8 @@ export class FormModalTallerComponent implements OnInit {
     });//serializa y envia formato tipo JS
   }
   update(): void {
-
-    this.tallerService.update$(this.tallId, this.frmTaller.value).subscribe(response => {
+    let data = Object.assign(this.frmTaller.value, {programa: {progId: this.frmTaller.value.progId}});
+    this.tallerService.update$(this.tallId, data).subscribe(response => {
       if (response.success) {
         this.activeModal.close({success: true, message:response.message});
       }
