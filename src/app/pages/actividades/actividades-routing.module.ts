@@ -6,6 +6,10 @@ import {MainPageComponent} from "../../core/main-page/main-page.component";
 import {MaterialesComponent} from "./materiales/materiales.component";
 import {ProgramasComponent} from "./programas/programas.component";
 import {TalleresComponent} from "./talleres/talleres.component";
+import {CarreraComponent} from "./carrera/carrera.component";
+import {FacultadComponent} from "./facultad/facultad.component";
+import {PersonaComponent} from "./persona/persona.component";
+import {TipoPersonaComponent} from "./tipo-persona/tipo-persona.component";
 
 
 const routes: Routes = [
@@ -27,6 +31,22 @@ const routes: Routes = [
         path: 'talleres',
         component: TalleresComponent,
 
+      },
+      {
+        path: 'carrera',
+        component: CarreraComponent
+      },
+      {
+        path: 'facultades',
+        component: FacultadComponent,
+      },
+      {
+        path: 'personas',
+        component: PersonaComponent,
+      },
+      {
+        path: 'tipopersonas',
+        component: TipoPersonaComponent
       },
      ]
   },
