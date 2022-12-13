@@ -44,6 +44,14 @@
         </select>
       </div>
     </div>
+    <div class="form-group row">
+      <label class="col-sm-3 col-form-label"> Carrera</label>
+      <div class="col-sm-9">
+        <select formControlName="caId" class="form-control" placeholder="Ingrese tipo de persona">
+          <option *ngFor="let carreras of carreras" [value]="carreras.caId">{{carreras.caNombre}}</option>
+        </select>
+      </div>
+    </div>
   </form>
 </div>
 <div class="modal-footer">

@@ -23,6 +23,13 @@ import {FormModalPersonaComponent} from "./persona/form-modal-persona/form-modal
 import { TipoPersonaComponent } from './tipo-persona/tipo-persona.component';
 import { FormModalTipoPersonaComponent } from './tipo-persona/form-modal-tipo-persona/form-modal-tipo-persona.component';
 import {TipoPersonaService} from "../../providers/services/tipo-persona.service";
+import {MaterialService} from "../../providers/services/material.service";
+import { FormModalMaterialesComponent } from './materiales/form-modal-materiales/form-modal-materiales.component';
+import {TipoMaterialService} from "../../providers/services/tipo-material.service";
+import { TipoMaterialesComponent } from './tipo-materiales/tipo-materiales.component';
+import {
+  FormModalTipoMaterialesComponent
+} from "./tipo-materiales/form-modal-tipo-materiales/form-modal-tipo-materiales.component";
 
 
 
@@ -42,6 +49,9 @@ import {TipoPersonaService} from "../../providers/services/tipo-persona.service"
     FormModalPersonaComponent,
     TipoPersonaComponent,
     FormModalTipoPersonaComponent,
+    FormModalMaterialesComponent,
+    FormModalTipoMaterialesComponent,
+    TipoMaterialesComponent,
   ],
     imports: [
         CommonModule,
@@ -55,6 +65,8 @@ import {TipoPersonaService} from "../../providers/services/tipo-persona.service"
     FacultadService,
     PersonaService,
     TipoPersonaService,
+    MaterialService,
+    TipoMaterialService,
 
   ]
 })

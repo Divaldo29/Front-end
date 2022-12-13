@@ -5,24 +5,22 @@
       <thead>
       <tr>
         <th>#</th>
-        <th>Materiales</th>
-        <th>Taller</th>
-        <th>Tipo</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
         <th colspan="2" class="text-center">Opciones</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let material of materiales; index as i" >
-        <td>{{material.maId}}</td>
-        <td>{{material.maName}}</td>
-        <td>{{material.taller.tallTema}}</td>
-        <td>{{material.tipoMateriales.tmName}}</td>
+      <tr *ngFor="let tipomaterial of tipomateriales; index as i" >
+        <td>{{tipomaterial.tmId}}</td>
+        <td>{{tipomaterial.tmName}}</td>
+        <td>{{tipomaterial.tmDesc}}</td>
         <td>
-          <button type="button" class="btn btn-sm btn-warning" (click)="openModalEdit(material)">Editar
+          <button type="button" class="btn btn-sm btn-warning" (click)="openModalEdit(tipomaterial)">Editar
           </button>
         </td>
         <td>
-          <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(material)">Eliminar
+          <button type="button" class="btn btn-sm btn-danger" (click)="onDelete(tipomaterial)">Eliminar
           </button>
         </td>
       </tr>
