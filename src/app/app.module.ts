@@ -12,6 +12,7 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 
 @NgModule({
   declarations: [
+
     AppComponent,
     DashboardComponent,
     PrincipalComponent
