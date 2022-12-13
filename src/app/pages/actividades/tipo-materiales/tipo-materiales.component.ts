@@ -1,32 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialService } from 'src/app/providers/services/material.service';
+import {ProgramaService} from "../../../providers/services/programa.service";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {FormModalComponent} from "../programas/form-modal/form-modal.component";
 import Swal from "sweetalert2";
-import {FormModalMaterialesComponent} from "./form-modal-materiales/form-modal-materiales.component";
+import {TipoMaterialService} from "../../../providers/services/tipo-material.service";
+import {FormModalTipoMaterialesComponent} from "./form-modal-tipo-materiales/form-modal-tipo-materiales.component";
 
 @Component({
-  selector: 'app-materiales',
-  templateUrl: './materiales.component.html',
-  styleUrls: ['./materiales.component.css']
+  selector: 'app-tipo-materiales',
+  templateUrl: './tipo-materiales.component.html',
+  styleUrls: ['./tipo-materiales.component.css']
 })
-export class MaterialesComponent implements OnInit {
+export class TipoMaterialesComponent implements OnInit {
 
-  materiales: any = [];
-  constructor(private materialService: MaterialService,
+  tipomateriales: any = [];
+  constructor(private tipomaterialesService: TipoMaterialService,
               private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    this.getMateriales();
+    this.getTipomateriales();
+
   }
 
-  getMateriales(): void {
-    this.materialService.getAll$().subscribe(response => {
-      this.materiales = response.data || [];
+  getTipomateriales(): void {
+    this.tipomaterialesService.getAll$().subscribe(response => {
+      this.tipomateriales = response.data || [];
     });
   }
 
   openModal(): void {
-    const modal = this.modalService.open(FormModalMaterialesComponent, {
+    const modal = this.modalService.open(FormModalTipoMaterialesComponent, {
       size: 'lg',
       keyboard: false,
       backdrop: 'static'
@@ -37,22 +40,22 @@ export class MaterialesComponent implements OnInit {
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: 'Materiales',
+          title: 'TipoMateriales',
           text: `${res.message}`,
           showConfirmButton: false,
           timer: 1300
         })
-        this.getMateriales();
+        this.getTipomateriales();
       }
     })
   }
   openModalEdit(item: any): any {
-    const modal = this.modalService.open(FormModalMaterialesComponent, {
+    const modal = this.modalService.open(FormModalTipoMaterialesComponent, {
       size: 'lg',
       keyboard: false,
       backdrop: 'static'
     });
-    modal.componentInstance.maId = item.maId;
+    modal.componentInstance.tmId = item.tmId;
     modal.componentInstance.item = item;
     modal.componentInstance.title = 'Modificar';
     modal.result.then(res => {
@@ -60,18 +63,18 @@ export class MaterialesComponent implements OnInit {
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: 'Materiales',
+          title: 'TipoMateriales',
           text: `${res.message}`,
           showConfirmButton: false,
           timer: 1300
         });
-        this.getMateriales();
+        this.getTipomateriales();
       }
     });
   }
   public onDelete(item: any): void {
-    const ID = item.maId;
-    const mensaje = '¿ Desea eliminar? : ' + ' ' + item.maName;
+    const ID = item.tmId;
+    const mensaje = '¿ Desea eliminar? : ' + ' ' + item.tmName;
     if (ID) {
       Swal.fire({
         title: 'Se eliminará el registro',
@@ -86,7 +89,7 @@ export class MaterialesComponent implements OnInit {
         cancelButtonText: 'Cancelar'
       }).then((result) => {
         if (result.value) {
-          this.materialService.delete$(ID).subscribe(data => {
+          this.tipomaterialesService.delete$(ID).subscribe(data => {
             if (data.success) {
               Swal.fire({
                 title: 'Eliminado',
@@ -97,12 +100,13 @@ export class MaterialesComponent implements OnInit {
                 confirmButtonColor: '#7f264a',
                 timer: 1500,
               });
-              this.getMateriales();
+              this.getTipomateriales();
             }
           });
         }
       });
     }
   }
+
 
 }

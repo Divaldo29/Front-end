@@ -10,6 +10,7 @@ import {CarreraComponent} from "./carrera/carrera.component";
 import {FacultadComponent} from "./facultad/facultad.component";
 import {PersonaComponent} from "./persona/persona.component";
 import {TipoPersonaComponent} from "./tipo-persona/tipo-persona.component";
+import {TipoMaterialesComponent} from "./tipo-materiales/tipo-materiales.component";
 
 
 const routes: Routes = [
@@ -47,6 +48,14 @@ const routes: Routes = [
       {
         path: 'tipopersonas',
         component: TipoPersonaComponent
+      },
+      {
+        path: 'materiales',
+        component: MaterialesComponent,
+      },
+      {
+        path: 'tipomateriales',
+        component: TipoMaterialesComponent
       },
      ]
   },

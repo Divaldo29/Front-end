@@ -18,6 +18,7 @@ import { PrincipalHeaderComponent } from './pagina-principal/principal-header/pr
     PaginaPrincipalComponent,
     PrincipalFooterComponent,
     PrincipalHeaderComponent,
+
   ],
   imports: [
     CommonModule,

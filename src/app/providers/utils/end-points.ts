@@ -9,6 +9,7 @@ export const END_POINTS = {
     carrera: 'carrera',
     persona: 'personas',
     tipopersona: 'tipopersonas',
+    tipomaterial: 'tipomateriales',
 
   }
 
