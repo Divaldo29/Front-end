@@ -11,6 +11,7 @@
         <th>DNI</th>
         <th>Télefono</th>
         <th>Tipo</th>
+        <th>Carrera</th>
         <th colspan="2" class="text-center">Opciones</th>
       </tr>
       </thead>
@@ -23,6 +24,7 @@
         <td>{{persona.peDNI}}</td>
         <td>{{persona.peCell}}</td>
         <td>{{persona.tipoPersona.tpNombre}}</td>
+        <td>{{persona.carrera.caNombre}}</td>
         <td>
           <button type="button" class="btn btn-sm btn-warning" (click)="openModalEdit(persona)">Editar
           </button>
