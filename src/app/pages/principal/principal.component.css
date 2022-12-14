@@ -12,6 +12,7 @@ body {
 
 h1 {
   font-size: 3.5em;
+  font-weight: bold;
 }
 
 h2 {
@@ -20,6 +21,10 @@ h2 {
 
 h3 {
   font-size: 2em;
+}
+h4{
+  font-size: 3em;
+
 }
 
 p {
@@ -109,20 +114,18 @@ header a:hover {
 
   background-image: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  ), url("imagenes/teri.jpg");
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ), url("imagenes/globalperson.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
-  
+
 html{
   scroll-behavior: smooth;
 }
-section[id]{
-  scroll-margin-top: 50px;
-}
+
 
 #hero h1 {
   color: whitesmoke;
@@ -282,7 +285,7 @@ footer .container {
   }
 
   #somos-proya .img-container{
-    background-image: url("imagenes/somos-proya.jpg");
+    background-image: url("imagenes/table.jpg.jpg");
     background-size: cover;
     background-position: center center;
     height: 500px;
@@ -325,33 +328,34 @@ footer .container {
       rgba(0,0,0,0.5),
       rgba(0,0,0,0.5)
     )
-    ,url("imagenes/front-end-cropped.jpg");
+    ,url("imagenes/pruebados.jpg");
 
   }
 
   .carta:nth-child(2){
+
     background-image: linear-gradient(
       0deg,
       rgba(0,0,0,0.5),
       rgba(0,0,0,0.5)
     )
-    ,url("imagenes/full-stack-cropped.jpg");
+    ,url("imagenes/familydos.jpg");
   }
 
   .carta:nth-child(3){
     background-image: linear-gradient(
       0deg,
-      rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)
+      rgba(0,0,0,0.4),
+      rgba(0,0,0,0.4)
     )
-    ,url("imagenes/python-cropped.jpg");
+    ,url("imagenes/estres.jpg");
 
   }
 
   #caracteristicas{
-    background-image: url("imagenes/background-2.jpeg");
+    background-image: url("imagenes/suit.jpg");
     background-repeat: no-repeat;
-    background-size: 500px 400px;
+    background-size: 530px 510px;
     background-position: calc(100vw - 500px) 120px;
   }
 
