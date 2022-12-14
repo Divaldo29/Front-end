@@ -17,12 +17,12 @@ import { PrincipalHeaderComponent } from './pagina-principal/principal-header/pr
     FooterComponent,
     PaginaPrincipalComponent,
     PrincipalFooterComponent,
-<<<<<<< HEAD
-    PrincipalHeaderComponent
-=======
-    PrincipalHeaderComponent,
 
->>>>>>> ad020e6602ceaec246f794b7df7cc80672b3fb9a
+    PrincipalHeaderComponent
+
+
+
+
   ],
   imports: [
     CommonModule,
