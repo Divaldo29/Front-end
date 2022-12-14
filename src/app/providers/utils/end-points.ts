@@ -10,7 +10,7 @@ export const END_POINTS = {
     persona: 'personas',
     tipopersona: 'tipopersonas',
     tipomaterial: 'tipomateriales',
-
+    personataller: 'personatalleres'
   }
 
 

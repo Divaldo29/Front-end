@@ -30,6 +30,9 @@ import { TipoMaterialesComponent } from './tipo-materiales/tipo-materiales.compo
 import {
   FormModalTipoMaterialesComponent
 } from "./tipo-materiales/form-modal-tipo-materiales/form-modal-tipo-materiales.component";
+import { PersonaTallerComponent } from './persona-taller/persona-taller.component';
+import { FormModalPersonaTallerComponent } from './persona-taller/form-modal-persona-taller/form-modal-persona-taller.component';
+import {PersonaTallerService} from "../../providers/services/persona-taller.service";
 
 
 
@@ -52,6 +55,8 @@ import {
     FormModalMaterialesComponent,
     FormModalTipoMaterialesComponent,
     TipoMaterialesComponent,
+    PersonaTallerComponent,
+    FormModalPersonaTallerComponent,
   ],
     imports: [
         CommonModule,
@@ -67,6 +72,7 @@ import {
     TipoPersonaService,
     MaterialService,
     TipoMaterialService,
+    PersonaTallerService,
 
   ]
 })
