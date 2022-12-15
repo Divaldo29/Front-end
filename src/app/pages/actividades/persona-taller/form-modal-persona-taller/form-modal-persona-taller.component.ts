@@ -13,7 +13,7 @@ import {TallerService} from "../../../../providers/services/taller.service";
 export class FormModalPersonaTallerComponent implements OnInit {
 
   @Input() title: any;
-  @Input() petaId: any;
+  @Input() peId: any;
   @Input() item: any;
   talleres: any = [];
   personas: any = [];
@@ -54,9 +54,9 @@ export class FormModalPersonaTallerComponent implements OnInit {
   formInit(): void {
     const controls = {
       petaEstadoAsistencia: ['', [Validators.required]],
+      petaFecha: ['', [Validators.required]],
       taller: ['', [Validators.required]],
       persona: ['', [Validators.required]],
-      petaFecha: ['', [Validators.required]],
     };
     this.frmPersonaTaller= this.formBuilder.group(controls);// construir formulario
   }
@@ -71,7 +71,7 @@ export class FormModalPersonaTallerComponent implements OnInit {
   }
   update(): void {
     let data = Object.assign(this.frmPersonaTaller.value, {taller: {tallId: this.frmPersonaTaller.value.taller}},{persona: {peId: this.frmPersonaTaller.value.persona}});
-    this.personaTallerService.update$(this.petaId, data).subscribe(response => {
+    this.personaTallerService.update$(this.peId, data).subscribe(response => {
       if (response.success) {
         this.activeModal.close({success: true, message:response.message});
       }

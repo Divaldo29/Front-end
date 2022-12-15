@@ -52,7 +52,7 @@ export class PersonaTallerComponent implements OnInit {
       keyboard: false,
       backdrop: 'static'
     });
-    modal.componentInstance.petaId = item.petaId;
+    modal.componentInstance.peId = item.peId;
     modal.componentInstance.item = item;
     modal.componentInstance.title = 'Modificar';
     modal.result.then(res => {
@@ -70,8 +70,8 @@ export class PersonaTallerComponent implements OnInit {
     });
   }
   public onDelete(item: any): void {
-    const ID = item.petaId;
-    const mensaje = '¿ Desea eliminar? : ' + ' ' + item.petaId;
+    const ID = item.peId;
+    const mensaje = '¿ Desea eliminar? : ' + ' ' + item.peId;
     if (ID) {
       Swal.fire({
         title: 'Se eliminará el registro',
